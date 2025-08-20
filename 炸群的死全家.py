@@ -14,7 +14,7 @@ import discord
 from discord.ext import commands
 
 # ====== 基本設定 ======
-BOT_TOKEN = "不會用自己的嗎"
+BOT_TOKEN = "MTQwNzM0MDY5NTM4MzE3OTM1Nw.GQdgXg.dr1c8EiR-kLKUbYfajG-7_O9ztxEUVe1vqe9n8"
 DEFAULT_DELETE_DELAY = 120  # 新 webhook 在非白名單時，延遲刪除秒數
 DATA_DIR = "guild_data"
 os.makedirs(DATA_DIR, exist_ok=True)
