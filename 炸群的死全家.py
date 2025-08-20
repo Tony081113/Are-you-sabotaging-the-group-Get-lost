@@ -12,9 +12,20 @@ from typing import Dict, Any, List
 import functools
 import discord
 from discord.ext import commands
+import os
+from dotenv import load_dotenv
 
+# 載入 .env
+load_dotenv()
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+if not TOKEN:
+    raise ValueError("❌ 沒有讀到 Discord Token，請檢查 .env 檔案！")
+
+print("✅ 成功讀取 Token")
 # ====== 基本設定 ======
-BOT_TOKEN = "不會用自己的嗎"
+BOT_TOKEN = TOKEN
 DEFAULT_DELETE_DELAY = 120  # 新 webhook 在非白名單時，延遲刪除秒數
 DATA_DIR = "guild_data"
 os.makedirs(DATA_DIR, exist_ok=True)
